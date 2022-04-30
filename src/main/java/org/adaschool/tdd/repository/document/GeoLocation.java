@@ -22,4 +22,12 @@ public class GeoLocation
     {
         return lng;
     }
+
+    public double distance(GeoLocation othGeoLoc) {
+        double hick1 = this.lat - othGeoLoc.getLat();
+        double hick2 = this.lng - othGeoLoc.getLng();
+        double hypotenuse = Math.sqrt(hick1*hick1 + hick2*hick2);
+        return hypotenuse;
+
+    }
 }
